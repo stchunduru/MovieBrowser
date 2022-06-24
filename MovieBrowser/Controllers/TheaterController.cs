@@ -19,7 +19,7 @@ namespace MovieBrowser.Controllers
         public async Task<IActionResult> Index()
         {
             var theaters = await _context.Theaters.ToListAsync();
-            return View();
+            return View(theaters);
         }
     }
 }

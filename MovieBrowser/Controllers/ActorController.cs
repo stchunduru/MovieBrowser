@@ -18,8 +18,8 @@ namespace MovieBrowser.Controllers
 
         public async Task <IActionResult> Index()
         {
-            var data = await _context.Actors.ToListAsync();
-            return View();
+            var actors = await _context.Actors.ToListAsync();
+            return View(actors);
         }
     }
 }

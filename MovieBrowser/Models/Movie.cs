@@ -11,9 +11,13 @@ namespace MovieBrowser.Models
     public class Movie
     {
         public int Id { get; set; }
+        [Display(Name = "Name")]
         public string Name { get; set; }
+        [Display(Name = "Description")]
         public string Description { get; set; }
+        [Display(Name = "Price")]
         public double Price { get; set; }
+        [Display(Name = "Image")]
         public string ImageURL { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

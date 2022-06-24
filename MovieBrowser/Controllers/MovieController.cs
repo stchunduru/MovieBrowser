@@ -18,8 +18,8 @@ namespace MovieBrowser.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var allMovies = await _context.Movie.ToListAsync();
-            return View();
+            var movies = await _context.Movie.Include(t => t.Theater).OrderBy(t => t.Name).ToListAsync();
+            return View(movies);
         }
     }
 }
